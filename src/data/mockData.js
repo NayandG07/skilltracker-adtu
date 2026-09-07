@@ -41,7 +41,7 @@ export const INITIAL_STUDENT_RECORD = {
   ]
 };
 
-// Full 59 Ranked Cohort Records (resolves the .slice(0, 3) bug)
+// Top Cohort Records for v1 MVP (with Rank #2 Nayandeep Goswami)
 export const COHORT_LEADERBOARD = [
   { rank: 1, name: "Aarav Sharma", enrollment: "ADTU/0/2024-28/BCSM/012", email: "a***a@gmail.com", score: 2890, dsaSolved: 148, labsDone: 19, avatarColor: "#d97757", isCurrentUser: false },
   { rank: 2, name: "Nayandeep Goswami", enrollment: "ADTU/0/2024-28/BCSM/047", email: "n***8@gmail.com", score: 2840, dsaSolved: 142, labsDone: 18, avatarColor: "#d97757", isCurrentUser: true },
@@ -57,51 +57,7 @@ export const COHORT_LEADERBOARD = [
   { rank: 12, name: "Juri Borgohain", enrollment: "ADTU/0/2024-28/BCSM/025", email: "j***n@gmail.com", score: 2450, dsaSolved: 114, labsDone: 15, avatarColor: "#d97757", isCurrentUser: false },
   { rank: 13, name: "Pranjal Saikia", enrollment: "ADTU/0/2024-28/BCSM/044", email: "p***a@gmail.com", score: 2420, dsaSolved: 112, labsDone: 15, avatarColor: "#c4ad8f", isCurrentUser: false },
   { rank: 14, name: "Meghna Chetia", enrollment: "ADTU/0/2024-28/BCSM/039", email: "m***a@gmail.com", score: 2390, dsaSolved: 110, labsDone: 15, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 15, name: "Deepjyoti Paul", enrollment: "ADTU/0/2024-28/BCSM/021", email: "d***l@gmail.com", score: 2350, dsaSolved: 107, labsDone: 14, avatarColor: "#5a8c69", isCurrentUser: false },
-  { rank: 16, name: "Tridip Borah", enrollment: "ADTU/0/2024-28/BCSM/057", email: "t***h@gmail.com", score: 2320, dsaSolved: 104, labsDone: 14, avatarColor: "#d97757", isCurrentUser: false },
-  { rank: 17, name: "Pallavi Talukdar", enrollment: "ADTU/0/2024-28/BCSM/042", email: "p***r@gmail.com", score: 2290, dsaSolved: 102, labsDone: 14, avatarColor: "#c4ad8f", isCurrentUser: false },
-  { rank: 18, name: "Chiranjit Gogoi", enrollment: "ADTU/0/2024-28/BCSM/017", email: "c***i@gmail.com", score: 2260, dsaSolved: 100, labsDone: 14, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 19, name: "Dimple Mahanta", enrollment: "ADTU/0/2024-28/BCSM/022", email: "d***a@gmail.com", score: 2230, dsaSolved: 98, labsDone: 13, avatarColor: "#5a8c69", isCurrentUser: false },
-  { rank: 20, name: "Gautam Goswami", enrollment: "ADTU/0/2024-28/BCSM/023", email: "g***i@gmail.com", score: 2200, dsaSolved: 96, labsDone: 13, avatarColor: "#d97757", isCurrentUser: false },
-  { rank: 21, name: "Suman Boro", enrollment: "ADTU/0/2024-28/BCSM/053", email: "s***o@gmail.com", score: 2170, dsaSolved: 94, labsDone: 13, avatarColor: "#c4ad8f", isCurrentUser: false },
-  { rank: 22, name: "Nabanita Medhi", enrollment: "ADTU/0/2024-28/BCSM/040", email: "n***i@gmail.com", score: 2140, dsaSolved: 92, labsDone: 13, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 23, name: "Bikash Thapa", enrollment: "ADTU/0/2024-28/BCSM/015", email: "b***a@gmail.com", score: 2110, dsaSolved: 90, labsDone: 12, avatarColor: "#5a8c69", isCurrentUser: false },
-  { rank: 24, name: "Pooja Sarmah", enrollment: "ADTU/0/2024-28/BCSM/043", email: "p***h@gmail.com", score: 2080, dsaSolved: 88, labsDone: 12, avatarColor: "#d97757", isCurrentUser: false },
-  { rank: 25, name: "Abhishek Dutta", enrollment: "ADTU/0/2024-28/BCSM/003", email: "a***a@gmail.com", score: 2050, dsaSolved: 86, labsDone: 12, avatarColor: "#c4ad8f", isCurrentUser: false },
-  { rank: 26, name: "Himangshu Das", enrollment: "ADTU/0/2024-28/BCSM/024", email: "h***s@gmail.com", score: 2020, dsaSolved: 84, labsDone: 12, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 27, name: "Kakoli Baishya", enrollment: "ADTU/0/2024-28/BCSM/026", email: "k***a@gmail.com", score: 1990, dsaSolved: 82, labsDone: 11, avatarColor: "#5a8c69", isCurrentUser: false },
-  { rank: 28, name: "Nabadeep Sarkar", enrollment: "ADTU/0/2024-28/BCSM/041", email: "n***r@gmail.com", score: 1960, dsaSolved: 80, labsDone: 11, avatarColor: "#d97757", isCurrentUser: false },
-  { rank: 29, name: "Raktim Barman", enrollment: "ADTU/0/2024-28/BCSM/048", email: "r***n@gmail.com", score: 1930, dsaSolved: 78, labsDone: 11, avatarColor: "#c4ad8f", isCurrentUser: false },
-  { rank: 30, name: "Shikha Moni", enrollment: "ADTU/0/2024-28/BCSM/054", email: "s***i@gmail.com", score: 1900, dsaSolved: 76, labsDone: 11, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 31, name: "Arindam Dey", enrollment: "ADTU/0/2024-28/BCSM/009", email: "a***y@gmail.com", score: 1870, dsaSolved: 74, labsDone: 10, avatarColor: "#5a8c69", isCurrentUser: false },
-  { rank: 32, name: "Bikramjit Singha", enrollment: "ADTU/0/2024-28/BCSM/016", email: "b***a@gmail.com", score: 1840, dsaSolved: 72, labsDone: 10, avatarColor: "#d97757", isCurrentUser: false },
-  { rank: 33, name: "Chinmoyee Kalita", enrollment: "ADTU/0/2024-28/BCSM/018", email: "c***a@gmail.com", score: 1810, dsaSolved: 70, labsDone: 10, avatarColor: "#c4ad8f", isCurrentUser: false },
-  { rank: 34, name: "Dipankar Bora", enrollment: "ADTU/0/2024-28/BCSM/020", email: "d***a@gmail.com", score: 1780, dsaSolved: 68, labsDone: 10, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 35, name: "Kasturi Devi", enrollment: "ADTU/0/2024-28/BCSM/028", email: "k***i@gmail.com", score: 1750, dsaSolved: 66, labsDone: 9, avatarColor: "#5a8c69", isCurrentUser: false },
-  { rank: 36, name: "Lohit Konwar", enrollment: "ADTU/0/2024-28/BCSM/032", email: "l***r@gmail.com", score: 1720, dsaSolved: 64, labsDone: 9, avatarColor: "#d97757", isCurrentUser: false },
-  { rank: 37, name: "Madhusmita Rabha", enrollment: "ADTU/0/2024-28/BCSM/033", email: "m***a@gmail.com", score: 1690, dsaSolved: 62, labsDone: 9, avatarColor: "#c4ad8f", isCurrentUser: false },
-  { rank: 38, name: "Mainul Haque", enrollment: "ADTU/0/2024-28/BCSM/034", email: "m***e@gmail.com", score: 1660, dsaSolved: 60, labsDone: 9, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 39, name: "Nilutpal Neog", enrollment: "ADTU/0/2024-28/BCSM/045", email: "n***g@gmail.com", score: 1630, dsaSolved: 58, labsDone: 8, avatarColor: "#5a8c69", isCurrentUser: false },
-  { rank: 40, name: "Partha Pratim", enrollment: "ADTU/0/2024-28/BCSM/046", email: "p***m@gmail.com", score: 1600, dsaSolved: 56, labsDone: 8, avatarColor: "#d97757", isCurrentUser: false },
-  { rank: 41, name: "Ripunjay Ray", enrollment: "ADTU/0/2024-28/BCSM/049", email: "r***y@gmail.com", score: 1570, dsaSolved: 54, labsDone: 8, avatarColor: "#c4ad8f", isCurrentUser: false },
-  { rank: 42, name: "Rituraj Chutia", enrollment: "ADTU/0/2024-28/BCSM/050", email: "r***a@gmail.com", score: 1540, dsaSolved: 52, labsDone: 8, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 43, name: "Rohit Agarwal", enrollment: "ADTU/0/2024-28/BCSM/051", email: "r***l@gmail.com", score: 1510, dsaSolved: 50, labsDone: 7, avatarColor: "#5a8c69", isCurrentUser: false },
-  { rank: 44, name: "Samirul Islam", enrollment: "ADTU/0/2024-28/BCSM/056", email: "s***m@gmail.com", score: 1480, dsaSolved: 48, labsDone: 7, avatarColor: "#d97757", isCurrentUser: false },
-  { rank: 45, name: "Utpal Sonowal", enrollment: "ADTU/0/2024-28/BCSM/059", email: "u***l@gmail.com", score: 1450, dsaSolved: 46, labsDone: 7, avatarColor: "#c4ad8f", isCurrentUser: false },
-  { rank: 46, name: "Ashish Kumar", enrollment: "ADTU/0/2024-28/BCSM/010", email: "a***r@gmail.com", score: 1420, dsaSolved: 44, labsDone: 7, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 47, name: "Bhargab Bhattacharya", enrollment: "ADTU/0/2024-28/BCSM/013", email: "b***a@gmail.com", score: 1390, dsaSolved: 42, labsDone: 6, avatarColor: "#5a8c69", isCurrentUser: false },
-  { rank: 48, name: "Debashish Roy", enrollment: "ADTU/0/2024-28/BCSM/011", email: "d***y@gmail.com", score: 1360, dsaSolved: 40, labsDone: 6, avatarColor: "#d97757", isCurrentUser: false },
-  { rank: 49, name: "Jayanta Kakati", enrollment: "ADTU/0/2024-28/BCSM/029", email: "j***i@gmail.com", score: 1330, dsaSolved: 38, labsDone: 6, avatarColor: "#c4ad8f", isCurrentUser: false },
-  { rank: 50, name: "Kishore Haloi", enrollment: "ADTU/0/2024-28/BCSM/030", email: "k***i@gmail.com", score: 1300, dsaSolved: 36, labsDone: 6, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 51, name: "Manab Jyoti", enrollment: "ADTU/0/2024-28/BCSM/035", email: "m***i@gmail.com", score: 1260, dsaSolved: 34, labsDone: 5, avatarColor: "#5a8c69", isCurrentUser: false },
-  { rank: 52, name: "Mridul Tamuli", enrollment: "ADTU/0/2024-28/BCSM/036", email: "m***i@gmail.com", score: 1220, dsaSolved: 32, labsDone: 5, avatarColor: "#d97757", isCurrentUser: false },
-  { rank: 53, name: "Munindra Das", enrollment: "ADTU/0/2024-28/BCSM/037", email: "m***s@gmail.com", score: 1180, dsaSolved: 30, labsDone: 5, avatarColor: "#c4ad8f", isCurrentUser: false },
-  { rank: 54, name: "Pankaj Sharma", enrollment: "ADTU/0/2024-28/BCSM/004", email: "p***a@gmail.com", score: 1140, dsaSolved: 28, labsDone: 5, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 55, name: "Pranjit Barua", enrollment: "ADTU/0/2024-28/BCSM/005", email: "p***a@gmail.com", score: 1100, dsaSolved: 26, labsDone: 4, avatarColor: "#5a8c69", isCurrentUser: false },
-  { rank: 56, name: "Rahul Choudhury", enrollment: "ADTU/0/2024-28/BCSM/006", email: "r***y@gmail.com", score: 1050, dsaSolved: 24, labsDone: 4, avatarColor: "#d97757", isCurrentUser: false },
-  { rank: 57, name: "Rishav Jain", enrollment: "ADTU/0/2024-28/BCSM/007", email: "r***n@gmail.com", score: 1000, dsaSolved: 22, labsDone: 4, avatarColor: "#c4ad8f", isCurrentUser: false },
-  { rank: 58, name: "Sanjib Paul", enrollment: "ADTU/0/2024-28/BCSM/001", email: "s***l@gmail.com", score: 940, dsaSolved: 19, labsDone: 3, avatarColor: "#d4973b", isCurrentUser: false },
-  { rank: 59, name: "Sumit Dey", enrollment: "ADTU/0/2024-28/BCSM/002", email: "s***y@gmail.com", score: 880, dsaSolved: 16, labsDone: 3, avatarColor: "#cc5a5a", isCurrentUser: false }
+  { rank: 15, name: "Deepjyoti Paul", enrollment: "ADTU/0/2024-28/BCSM/021", email: "d***l@gmail.com", score: 2350, dsaSolved: 107, labsDone: 14, avatarColor: "#5a8c69", isCurrentUser: false }
 ];
 
 // Curated DSA 300 with Verified Canonical LeetCode Slugs (No regex 404s!)
@@ -450,7 +406,7 @@ export const INITIAL_NOTIFICATIONS = [
     timestamp: "10 minutes ago",
     read: false,
     priority: "high",
-    actionUrl: "/student/list"
+    actionUrl: "/student/detail/lab-os-05"
   },
   {
     id: "notif-2",
@@ -473,3 +429,156 @@ export const INITIAL_NOTIFICATIONS = [
     actionUrl: "/student/result/diag-result-502"
   }
 ];
+
+// Interactive Quiz Questions Map for Lab Assessments
+export const QUIZ_QUESTIONS_MAP = {
+  "lab-os-05": [
+    {
+      id: 1,
+      topic: "Page Replacement",
+      questionText: "In Belady's Anomaly, increasing the number of page frames results in:",
+      codeSnippet: `// FIFO Page Replacement Simulation
+int frames = 4; // previously 3
+int faults = simulate_fifo(reference_string, frames);
+// Result: faults increased from 9 to 10!`,
+      options: [
+        { id: "A", text: "A guaranteed decrease in page fault rate across all reference strings" },
+        { id: "B", text: "An unexpected increase in page faults (primarily observed in FIFO)" },
+        { id: "C", text: "Instant starvation of the kernel context switcher" },
+        { id: "D", text: "Hardware MMU cache failure during TLB invalidation" }
+      ],
+      correctAnswer: "B",
+      explanation: "Belady's Anomaly demonstrates that for some reference strings, the FIFO algorithm suffers more page faults when given more physical frames."
+    },
+    {
+      id: 2,
+      topic: "Optimal Page Replacement",
+      questionText: "Which page replacement policy replaces the page that will not be used for the longest period of time in the future?",
+      codeSnippet: null,
+      options: [
+        { id: "A", text: "Least Recently Used (LRU)" },
+        { id: "B", text: "First-In First-Out (FIFO)" },
+        { id: "C", text: "Optimal Page Replacement (OPT / MIN)" },
+        { id: "D", text: "Second-Chance (Clock) Algorithm" }
+      ],
+      correctAnswer: "C",
+      explanation: "The Optimal Page Replacement algorithm (OPT/Belady's MIN) replaces the page that will not be accessed for the longest duration into the future. It is primarily used as a theoretical benchmark."
+    },
+    {
+      id: 3,
+      topic: "Thrashing & Working Set",
+      questionText: "Thrashing occurs in an operating system when:",
+      codeSnippet: `// High Page Fault Frequency (PFF)
+if (current_page_fault_rate > upper_threshold) {
+    // OS spends more time swapping pages than executing instructions
+    cpu_utilization = CRITICAL_LOW;
+}`,
+      options: [
+        { id: "A", text: "The CPU spends more time swapping pages in and out than executing instructions" },
+        { id: "B", text: "Multiple threads access a non-atomic integer without mutex synchronization" },
+        { id: "C", text: "The disk scheduler switches from SCAN to C-LOOK under heavy I/O" },
+        { id: "D", text: "The page table size exceeds physical RAM capacity" }
+      ],
+      correctAnswer: "A",
+      explanation: "Thrashing is high paging activity where the system spends the majority of its execution cycles servicing page faults rather than productive computation."
+    },
+    {
+      id: 4,
+      topic: "Virtual Memory MMU",
+      questionText: "The Translation Lookaside Buffer (TLB) is primarily implemented using:",
+      codeSnippet: null,
+      options: [
+        { id: "A", text: "DRAM memory cells located on the motherboard" },
+        { id: "B", text: "Fast, fully-associative SRAM cache hardware integrated into the CPU MMU" },
+        { id: "C", text: "Secondary swap partitions on the NVMe drive" },
+        { id: "D", text: "A balanced B+ Tree in kernel memory space" }
+      ],
+      correctAnswer: "B",
+      explanation: "The TLB is high-speed associative hardware cache embedded inside the Memory Management Unit (MMU) for single-cycle virtual-to-physical address translation."
+    },
+    {
+      id: 5,
+      topic: "Clock Algorithm",
+      questionText: "In the Second-Chance (Clock) page replacement algorithm, what happens when a page frame has its reference bit set to 1?",
+      codeSnippet: `struct PageFrame {
+    int page_num;
+    unsigned int reference_bit: 1;
+};`,
+      options: [
+        { id: "A", text: "It is immediately evacuated to the swap partition" },
+        { id: "B", text: "The reference bit is cleared to 0 and the clock pointer advances to the next frame" },
+        { id: "C", text: "It is locked permanently into physical memory" },
+        { id: "D", text: "The page frame is marked as corrupted" }
+      ],
+      correctAnswer: "B",
+      explanation: "The Clock algorithm gives the page a second chance: it clears the reference bit from 1 to 0 and inspects the next page frame."
+    }
+  ],
+  "lab-cn-06": [
+    {
+      id: 1,
+      topic: "TCP Socket Architecture",
+      questionText: "Which system call transforms an active TCP socket descriptor into a passive listening socket?",
+      codeSnippet: `int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+bind(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
+// What system call belongs here?`,
+      options: [
+        { id: "A", text: "accept()" },
+        { id: "B", text: "listen()" },
+        { id: "C", text: "connect()" },
+        { id: "D", text: "poll()" }
+      ],
+      correctAnswer: "B",
+      explanation: "listen() marks the stream socket as passive, enabling incoming connection requests to be queued."
+    },
+    {
+      id: 2,
+      topic: "Non-blocking I/O",
+      questionText: "What mechanism allows a single server process to monitor multiple file descriptors without spawning a thread per client?",
+      codeSnippet: null,
+      options: [
+        { id: "A", text: "I/O Multiplexing (select, poll, or epoll)" },
+        { id: "B", text: "Spinlock busy-waiting loops" },
+        { id: "C", text: "UDP Datagram tunneling" },
+        { id: "D", text: "Direct Memory Access (DMA) interrupts" }
+      ],
+      correctAnswer: "A",
+      explanation: "I/O multiplexing primitives such as epoll/poll/select monitor multiple open sockets simultaneously, alerting the process when data is ready for reading or writing."
+    }
+  ]
+};
+
+// Initial Student Feedback Submissions (matching the live theskilltracker.in feedback module)
+export const INITIAL_FEEDBACK_ITEMS = [
+  {
+    id: "fb-101",
+    title: "Request for LeetCode dynamic submission auto-sync verification",
+    category: "Platform Enhancement",
+    priority: "Medium",
+    status: "Resolved",
+    submittedAt: "2026-09-02",
+    response: "Implemented canonical LeetCode slug resolution and IndexedDB offline cache.",
+    message: "Some problem links previously failed due to dynamic regex slug calculation. Would appreciate direct canonical URL links."
+  },
+  {
+    id: "fb-102",
+    title: "Operating Systems Lab 05 submission deadline extension",
+    category: "Academic Query",
+    priority: "High",
+    status: "In Progress",
+    submittedAt: "2026-09-06",
+    response: "Under review by Prof. N. K. Choudhury.",
+    message: "Requesting 24-hour grace window for benchmarking LRU algorithm across 10-frame configurations."
+  },
+  {
+    id: "fb-103",
+    title: "Semester 5 Transcript printable format margin correction",
+    category: "Bug Report",
+    priority: "Low",
+    status: "Resolved",
+    submittedAt: "2026-08-28",
+    response: "Print CSS updated with clean @media print margins and PDF headers.",
+    message: "Sidebar was overlapping with the semester marks table when saving as PDF."
+  }
+];
+

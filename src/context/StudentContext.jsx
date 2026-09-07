@@ -4,7 +4,9 @@ import {
   COHORT_LEADERBOARD,
   INITIAL_DSA_PROBLEMS,
   INITIAL_LABS,
-  INITIAL_NOTIFICATIONS
+  INITIAL_NOTIFICATIONS,
+  INITIAL_FEEDBACK_ITEMS,
+  QUIZ_QUESTIONS_MAP
 } from '../data/mockData';
 import { OfflineQueueService } from '../services/offlineQueue';
 import { NotificationManager, registerToastListener } from '../services/notificationManager';
@@ -232,12 +234,45 @@ export const StudentProvider = ({ children }) => {
 
   const unreadNotificationsCount = notifications.filter((n) => !n.read).length;
 
+  // 8. Student Feedback State
+  const [feedbackItems, setFeedbackItems] = useState(() => {
+    const saved = localStorage.getItem('skilltracker_feedback_v2');
+    return saved ? JSON.parse(saved) : INITIAL_FEEDBACK_ITEMS;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('skilltracker_feedback_v2', JSON.stringify(feedbackItems));
+  }, [feedbackItems]);
+
+  const submitFeedback = (newFeedback) => {
+    const created = {
+      id: 'fb-' + Date.now(),
+      title: newFeedback.title,
+      category: newFeedback.category || 'Platform Feedback',
+      priority: newFeedback.priority || 'Medium',
+      status: 'Open',
+      submittedAt: new Date().toISOString().split('T')[0],
+      response: 'Acknowledged by Portal Administration. Assigned to Faculty Moderator.',
+      message: newFeedback.message
+    };
+    setFeedbackItems((prev) => [created, ...prev]);
+
+    NotificationManager.dispatch({
+      title: 'Feedback Submitted',
+      body: `Your grievance/feedback #${created.id} has been logged for evaluation.`,
+      tag: 'feedback-' + created.id
+    });
+
+    return created;
+  };
+
   return (
     <StudentContext.Provider
       value={{
         student,
         setStudent,
         labs,
+        setLabs,
         submitLab,
         dsaProblems,
         toggleDsaProblem,
@@ -259,7 +294,10 @@ export const StudentProvider = ({ children }) => {
         offlineSyncMessage,
         setOfflineSyncMessage,
         isCorrectionModalOpen,
-        setIsCorrectionModalOpen
+        setIsCorrectionModalOpen,
+        feedbackItems,
+        submitFeedback,
+        quizQuestionsMap: QUIZ_QUESTIONS_MAP
       }}
     >
       {children}

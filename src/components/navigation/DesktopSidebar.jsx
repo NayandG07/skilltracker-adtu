@@ -11,7 +11,8 @@ import {
   Wifi,
   WifiOff,
   LogOut,
-  ChevronRight
+  ChevronRight,
+  MessageSquare
 } from 'lucide-react';
 import { useStudent } from '../../context/StudentContext';
 
@@ -37,7 +38,8 @@ export const DesktopSidebar = () => {
     },
     { to: '/student/leaderboard', label: 'Cohort Leaderboard', icon: Trophy },
     { to: '/student/transcript', label: 'Academic Transcript', icon: FileText },
-    { to: '/student/profile', label: 'Student Profile', icon: User }
+    { to: '/student/profile', label: 'Student Profile', icon: User },
+    { to: '/student/feedback', label: 'Student Feedback', icon: MessageSquare }
   ];
 
   return (

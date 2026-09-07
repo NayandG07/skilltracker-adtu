@@ -41,6 +41,8 @@ export const AppLayout = () => {
   const location = useLocation();
   useSwipeNavigation();
 
+  const isExamMode = location.pathname.includes('/quiz/') || location.pathname.includes('/workspace/');
+
   return (
     <div className="min-h-screen bg-[#faf9f5] text-[#1a1918] flex flex-col lg:flex-row antialiased">
       {/* Top Navigation Progress Bar */}
@@ -55,15 +57,15 @@ export const AppLayout = () => {
       )}
 
       {/* Desktop Command Sidebar (>= 1024px) */}
-      <DesktopSidebar />
+      {!isExamMode && <DesktopSidebar />}
 
       {/* Main Content Canvas */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Mobile Header (< 1024px) */}
-        <MobileHeader />
+        {!isExamMode && <MobileHeader />}
 
         {/* Dynamic Route Canvas with Safe-Area Clearance for Floating Islands */}
-        <main className="flex-1 pb-28 lg:pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl w-full mx-auto pt-20 lg:pt-6 overflow-x-hidden">
+        <main className={`flex-1 ${isExamMode ? 'pb-8 pt-4 lg:pt-6' : 'pb-28 lg:pb-12 pt-20 lg:pt-6'} px-4 sm:px-6 lg:px-8 max-w-7xl w-full mx-auto overflow-x-hidden`}>
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}
@@ -79,7 +81,7 @@ export const AppLayout = () => {
         </main>
 
         {/* Floating Apple Liquid Glass Navigation (< 1024px) */}
-        <MobileNavBar />
+        {!isExamMode && <MobileNavBar />}
       </div>
 
       {/* Global Modals, Floating Island Notifications, & Drawers */}
